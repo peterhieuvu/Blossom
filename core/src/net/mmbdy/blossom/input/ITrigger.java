@@ -11,6 +11,11 @@ package net.mmbdy.blossom.input;
  */
 public interface ITrigger {
 	
+	/**
+	 * The Bind category a certain {@link BindSet} belongs to
+	 * @author Peter Vu
+	 *
+	 */
 	public enum Type {
 		Keyboard, Alternate, Controller, Mouse
 	}

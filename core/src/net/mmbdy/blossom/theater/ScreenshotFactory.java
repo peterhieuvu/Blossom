@@ -1,3 +1,7 @@
+/** 
+ * Copyright (c) 2016, Peter Vu. All rights reserved.
+ * License terms are in the included LICENSE.txt file.
+ */
 package net.mmbdy.blossom.theater;
 
 import java.nio.ByteBuffer;
@@ -10,7 +14,11 @@ import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.PixmapIO;
 import com.badlogic.gdx.utils.ScreenUtils;
 
-public class ScreenshotFactory {
+import net.mmbdy.blossom.util.Disposable;
+
+//TODO: Document this
+
+public class ScreenshotFactory implements Disposable {
 
 	private static boolean YDOWN = true;
 
@@ -80,6 +88,14 @@ public class ScreenshotFactory {
 			pixels.put(lines);
 		}
 		return pixmap;
+	}
+
+	@Override
+	public void dispose() {
+		for(int i = 0; i < screenshots.size(); i++) {
+			screenshots.get(i).dispose();
+		}
+		screenshots.clear();
 	}
 
 }

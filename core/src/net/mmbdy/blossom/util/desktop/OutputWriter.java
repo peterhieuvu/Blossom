@@ -1,3 +1,7 @@
+/** 
+ * Copyright (c) 2016, Peter Vu. All rights reserved.
+ * License terms are in the included LICENSE.txt file.
+ */
 package net.mmbdy.blossom.util.desktop;
 
 import java.io.BufferedWriter;
@@ -6,8 +10,11 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.Writer;
 
-public class OutputWriter {
+import net.mmbdy.blossom.util.Disposable;
 
+public class OutputWriter implements Disposable{
+
+	//TODO: Document this, look for java fast I/O and faster System.out.print
 	private final PrintWriter writer;
 
 	public OutputWriter(OutputStream outputStream) {
@@ -36,6 +43,11 @@ public class OutputWriter {
 
 	public void flush() {
 		writer.flush();
+	}
+
+	@Override
+	public void dispose() {
+		close();
 	}
 
 }

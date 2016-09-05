@@ -11,6 +11,8 @@
 * Tween Engine
 * Map System
 * Asset Management
+* Shaders
+* Figure out how I want to scale everything and how I want the axes.
 * Screen Recording, Saving Compressed Video and stuff
 
 # Current Features

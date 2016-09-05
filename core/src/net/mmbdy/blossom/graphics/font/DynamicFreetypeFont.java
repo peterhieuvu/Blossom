@@ -1,3 +1,7 @@
+/** 
+ * Copyright (c) 2016, Peter Vu. All rights reserved.
+ * License terms are in the included LICENSE.txt file.
+ */
 package net.mmbdy.blossom.graphics.font;
 
 import com.badlogic.gdx.assets.AssetManager;
@@ -12,7 +16,7 @@ import com.badlogic.gdx.graphics.g2d.freetype.FreetypeFontLoader.FreeTypeFontLoa
 
 public class DynamicFreetypeFont implements IStaticFont {
 	
-	//TODO: Finish this class
+	//TODO: Document and Finish this class
 	
 	FreeTypeFontGenerator generator;
 	FreeTypeFontParameter parameter;

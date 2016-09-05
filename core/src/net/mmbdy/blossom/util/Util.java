@@ -5,8 +5,8 @@
 package net.mmbdy.blossom.util;
 
 /**
+ * Contains Various utility functions which do not belong in an individual class
  * @author Peter Vu
- *
  */
 public class Util {
 	

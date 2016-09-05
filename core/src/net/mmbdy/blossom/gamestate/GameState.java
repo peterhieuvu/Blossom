@@ -1,14 +1,20 @@
+/** 
+ * Copyright (c) 2016, Peter Vu. All rights reserved.
+ * License terms are in the included LICENSE.txt file.
+ */
 package net.mmbdy.blossom.gamestate;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-public interface GameState {
+import net.mmbdy.blossom.util.Disposable;
+
+//TODO: Document this
+
+public interface GameState extends Disposable {
 
 	//Create and destroy
 	
 	public void init();
-	
-	public void dispose();
 
 	//Managing transitions and pauses
 	

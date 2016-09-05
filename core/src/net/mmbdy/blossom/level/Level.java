@@ -1,3 +1,7 @@
+/** 
+ * Copyright (c) 2016, Peter Vu. All rights reserved.
+ * License terms are in the included LICENSE.txt file.
+ */
 package net.mmbdy.blossom.level;
 
 import java.util.ArrayDeque;
@@ -13,6 +17,8 @@ import net.mmbdy.blossom.entity.Entity;
 import net.mmbdy.blossom.entity.Player;
 import net.mmbdy.blossom.gamestate.GameState;
 import net.mmbdy.blossom.physics.spatial.Boundary;
+
+//TODO: Document this
 
 public abstract class Level implements GameState {
 	

@@ -1,8 +1,14 @@
+/** 
+ * Copyright (c) 2016, Peter Vu. All rights reserved.
+ * License terms are in the included LICENSE.txt file.
+ */
 package net.mmbdy.blossom.physics.spatial;
 
 import java.awt.Point;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+
+//TODO: Document this
 
 public class Boundary {
 	public float x0, y0, x1, y1;

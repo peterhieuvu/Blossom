@@ -71,6 +71,10 @@ public abstract class BindSet implements ITrigger {
 		appendTriggers(triggers);
 	}
 	
+	/**
+	 * Append an array of triggers onto the current set of triggers
+	 * @param triggers
+	 */
 	protected void appendTriggers(int[] triggers) {
 		if(this.triggers == null) setTriggers(triggers);
 		int pos = this.triggers.length;

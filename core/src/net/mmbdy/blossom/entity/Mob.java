@@ -1,4 +1,10 @@
+/** 
+ * Copyright (c) 2016, Peter Vu. All rights reserved.
+ * License terms are in the included LICENSE.txt file.
+ */
 package net.mmbdy.blossom.entity;
+
+//TODO: Document this
 
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 

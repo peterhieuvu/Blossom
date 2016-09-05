@@ -1,3 +1,7 @@
+/** 
+ * Copyright (c) 2016, Peter Vu. All rights reserved.
+ * License terms are in the included LICENSE.txt file.
+ */
 package net.mmbdy.blossom.util.desktop;
 
 import java.io.IOException;
@@ -6,6 +10,8 @@ import java.util.InputMismatchException;
 
 public class InputReader {
 
+	//TODO: Document this
+	
 	private InputStream stream;
 
 	private byte[] buf = new byte[1024];

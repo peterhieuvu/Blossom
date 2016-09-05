@@ -5,15 +5,15 @@
 package net.mmbdy.blossom.util;
 
 /**
- * Main debug class with tools to help debug and test the application
+ * Interface to dispose resources
  * @author Peter Vu
  *
  */
-public class Debug {
+public interface Disposable {
 	
 	/**
-	 * Master debug switch for debug settings
+	 * Releases all the resources of the object
 	 */
-	public static boolean DEBUG_MASTER = true;
+	public void dispose();
 
 }

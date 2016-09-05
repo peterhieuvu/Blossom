@@ -1,10 +1,15 @@
+/** 
+ * Copyright (c) 2016, Peter Vu. All rights reserved.
+ * License terms are in the included LICENSE.txt file.
+ */
 package net.mmbdy.blossom.entity;
-
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import net.mmbdy.blossom.level.Level;
 import net.mmbdy.blossom.physics.spatial.Boundary;
+
+//TODO: Document this
 
 public abstract class Entity {
 

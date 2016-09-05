@@ -1,4 +1,12 @@
+/** 
+ * Copyright (c) 2016, Peter Vu. All rights reserved.
+ * License terms are in the included LICENSE.txt file.
+ */
 package net.mmbdy.blossom.graphics.font;
 
-public interface IDynamicFont {
+import net.mmbdy.blossom.util.Disposable;
+
+//TODO: Document and finish
+
+public interface IDynamicFont extends Disposable {
 }

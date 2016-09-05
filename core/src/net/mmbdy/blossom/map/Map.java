@@ -1,10 +1,18 @@
+/** 
+ * Copyright (c) 2016, Peter Vu. All rights reserved.
+ * License terms are in the included LICENSE.txt file.
+ */
 package net.mmbdy.blossom.map;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 
-public class Map {
+import net.mmbdy.blossom.util.Disposable;
+
+//TODO: Document this
+
+public class Map implements Disposable {
 	
 	private TiledMap map;
 	private OrthogonalTiledMapRenderer renderer;
@@ -29,6 +37,7 @@ public class Map {
 		renderer.render();
 	}
 	
+	@Override
 	public void dispose() {
 		map.dispose();
 		renderer.dispose();

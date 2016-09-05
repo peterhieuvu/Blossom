@@ -1,11 +1,18 @@
+/** 
+ * Copyright (c) 2016, Peter Vu. All rights reserved.
+ * License terms are in the included LICENSE.txt file.
+ */
 package net.mmbdy.blossom.physics.spatial;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import net.mmbdy.blossom.entity.Entity;
+import net.mmbdy.blossom.util.Disposable;
 
-public class Quadtree {
+//TODO: Document this
+
+public class Quadtree implements Disposable {
 
 	private final int MAX_OBJECTS = 10; //Maximum Num of objects a node can hold before it splits
 	private final int MAX_LEVELS = 5; //Deepest level subnode
@@ -125,5 +132,10 @@ public class Quadtree {
 		}
 		returnObjects.addAll(entities);
 		return returnObjects;
+	}
+
+	@Override
+	public void dispose() {
+		entities.clear();
 	}
 }

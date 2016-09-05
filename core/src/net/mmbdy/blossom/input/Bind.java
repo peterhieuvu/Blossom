@@ -34,6 +34,10 @@ public class Bind {
 		this.binds = binds;
 	}
 
+	/**
+	 * Get the state of the Control Bind in float format
+	 * @return float value of the Control Bind. For a Key or Button, the value will be 0 or 1 (down or up). For a continuous bind, the value may be any float
+	 */
 	public float getData() {
 		if (binds == null) return 0;
 		//TODO: Check if I need to move the float stand in somewhere else, also check to see if I can not have to do this recursively because the recursion means more instantiation
@@ -45,6 +49,9 @@ public class Bind {
 		return 0;
 	}
 
+	/**
+	 * @return Whether or not the Control Bind is down
+	 */
 	public boolean isDown() {
 		if (binds == null) return false;
 		for (int i = 0; i < binds.length; i++) {
@@ -53,6 +60,9 @@ public class Bind {
 		return false;
 	}
 
+	/**
+	 * @return Whether or not the Control Bind was just pressed
+	 */
 	public boolean isJustPressed() {
 		if (binds == null) return false;
 		for (int i = 0; i < binds.length; i++) {

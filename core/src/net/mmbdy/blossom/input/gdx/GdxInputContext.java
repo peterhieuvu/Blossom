@@ -11,15 +11,19 @@ import com.badlogic.gdx.InputProcessor;
 import net.mmbdy.blossom.input.IInputContext;
 
 /**
+ * LibGDX implementation of an Input Context. Provides high level access to user input data
  * @author Peter Vu
  *
  */
 public class GdxInputContext implements IInputContext {
 
+	/**
+	 * Input device used to poll input from
+	 */
 	private Input input = Gdx.input;
 	
 	/**
-	 * 
+	 * Empty constructor used to initialize an Input Context based on the LibGDX input
 	 */
 	public GdxInputContext() {
 	}

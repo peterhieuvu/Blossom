@@ -1,8 +1,14 @@
+/** 
+ * Copyright (c) 2016, Peter Vu. All rights reserved.
+ * License terms are in the included LICENSE.txt file.
+ */
 package net.mmbdy.blossom.gamestate;
 
 import java.util.ArrayDeque;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+
+//TODO: Fully document this
 
 public class StateManager {
 	
