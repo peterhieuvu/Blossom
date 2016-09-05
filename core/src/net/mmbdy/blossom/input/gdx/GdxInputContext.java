@@ -22,7 +22,6 @@ public class GdxInputContext implements IInputContext {
 	 * 
 	 */
 	public GdxInputContext() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	@Override
@@ -47,25 +46,21 @@ public class GdxInputContext implements IInputContext {
 
 	@Override
 	public float getPixX() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public float getPixY() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public float getDeltaPixX() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public float getDeltaPixY() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 

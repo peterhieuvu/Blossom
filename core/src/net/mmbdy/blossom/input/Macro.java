@@ -10,6 +10,8 @@ package net.mmbdy.blossom.input;
  */
 public class Macro extends BindSet {
 
+	//TODO: Finish this class
+	
 	/**
 	 * @param name
 	 * @param slots
@@ -17,24 +19,20 @@ public class Macro extends BindSet {
 	 */
 	public Macro(Type name, int slots, int[] triggers) {
 		super(name, slots, triggers);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public float getData() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public boolean isDown() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean isJustPressed() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 

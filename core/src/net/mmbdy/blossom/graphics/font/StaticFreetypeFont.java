@@ -41,8 +41,7 @@ public class StaticFreetypeFont implements IStaticFont {
 
 	@Override
 	public void render() {
-		// TODO Auto-generated method stub
-		
+		// TODO Implement this
 	}
 
 }

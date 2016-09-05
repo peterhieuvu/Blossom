@@ -3,6 +3,8 @@ package net.mmbdy.blossom.entity;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import net.mmbdy.blossom.physics.spatial.Boundary;
+
 public abstract class Entity {
 
 	public float x, y;
@@ -27,6 +29,14 @@ public abstract class Entity {
 	
 	public void remove() {
 		removed = true;
+	}
+
+	/**
+	 * @return
+	 */
+	public Boundary getBounds() {
+		// TODO Implement this
+		return null;
 	}
 	
 }

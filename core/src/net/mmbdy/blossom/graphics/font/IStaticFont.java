@@ -4,8 +4,6 @@ public interface IStaticFont {
 	
 	public void render();
 	
-	
-	
 	public void dispose();
 	
 }

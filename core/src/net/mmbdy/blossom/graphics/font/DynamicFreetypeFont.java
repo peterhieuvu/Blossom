@@ -12,6 +12,8 @@ import com.badlogic.gdx.graphics.g2d.freetype.FreetypeFontLoader.FreeTypeFontLoa
 
 public class DynamicFreetypeFont implements IStaticFont {
 	
+	//TODO: Finish this class
+	
 	FreeTypeFontGenerator generator;
 	FreeTypeFontParameter parameter;
 	BitmapFont font;
@@ -47,14 +49,9 @@ public class DynamicFreetypeFont implements IStaticFont {
 
 	@Override
 	public void render() {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void dispose() {
-		// TODO Auto-generated method stub
-		
 	}
-	
 }
