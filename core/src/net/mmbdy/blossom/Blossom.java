@@ -7,9 +7,11 @@ package net.mmbdy.blossom;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 
+import net.mmbdy.blossom.entity.Player;
 import net.mmbdy.blossom.input.IInputContext;
 import net.mmbdy.blossom.input.Input.Binds;
 import net.mmbdy.blossom.input.gdx.GdxInputContext;
@@ -19,17 +21,28 @@ import net.mmbdy.blossom.input.gdx.GdxInputContext;
  *
  */
 public class Blossom extends ApplicationAdapter {
-	SpriteBatch batch;
-	Texture img;
-
+	
+	private SpriteBatch batch;
+	private float delta;
+	
+	private Player player;
+	private TextureAtlas playerAtlas;
+	
+	private OrthographicCamera camera;
+	
 	public static IInputContext input;
 
 	@Override
 	public void create() {
 		batch = new SpriteBatch();
-		img = new Texture("badlogic.jpg");
-		
 		input = new GdxInputContext();
+		
+		camera = new OrthographicCamera();
+		camera.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		
+		playerAtlas = new TextureAtlas("players.pack");
+		
+		player = new Player(0, 0, playerAtlas.findRegion("blackblue"));
 	}
 
 	@Override
@@ -37,19 +50,24 @@ public class Blossom extends ApplicationAdapter {
 		Gdx.gl.glClearColor(1, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-		System.out.format("U: %f  D: %f  L: %f  R: %f  <: %f  >: %f  |: %f  }: %f  {: %f%n",
-				Binds.up.getData(), Binds.down.getData(), Binds.left.getData(),
-				Binds.right.getData(), Binds.primaryFire.getData(), Binds.secondaryFire.getData(),
-				Binds.spot.getData(), Binds.abilityOne.getData(), Binds.abilityTwo.getData());
+		System.out.format("U: %f  D: %f  L: %f  R: %f  B: %f%n", Binds.up.getData(),
+				Binds.down.getData(), Binds.left.getData(), Binds.right.getData(),
+				Binds.boost.getData());
 
+		delta = Gdx.graphics.getDeltaTime();
+		
+		player.tick(delta);
+		
+		batch.setProjectionMatrix(camera.combined);
 		batch.begin();
-		batch.draw(img, 0, 0);
+		player.render(batch);
 		batch.end();
 	}
 
 	@Override
 	public void dispose() {
 		batch.dispose();
-		img.dispose();
+		player.dispose();
+		playerAtlas.dispose();
 	}
 }

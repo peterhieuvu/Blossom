@@ -14,7 +14,8 @@ import net.mmbdy.blossom.Blossom;
 public class KeyBind extends BindSet {
 
 	/**
-	 * Set of keys to be polled for input. Standard constructor that is called by all other constructors.
+	 * Set of keys to be polled for input. Standard constructor that is called by all other constructors.<br \>
+	 * If the length of triggers is greater than slots, the end will be truncated.
 	 * @param type    The type of bind set
 	 * @param slots    The maximum amount of triggers for the bind set
 	 * @param triggers   The triggers for the bind set
@@ -22,6 +23,7 @@ public class KeyBind extends BindSet {
 	public KeyBind(Type type, int slots, int... triggers) {
 		super(type, slots, triggers);
 	}
+	//TODO: Consider a KeyBind with only one slot so that we don't have to do this array stuff, also applies to ButtonBind
 
 	@Override
 	public float getData() {

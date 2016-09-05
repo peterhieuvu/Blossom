@@ -8,6 +8,38 @@
 * Debugging
 * Logging
 * Simple Profiler
+* Tween Engine
+* Map System
+* Asset Management
+* Screen Recording, Saving Compressed Video and stuff
+
+# Current Features
+
+## Graphics
+* LibGDX backend
+* GLES for all platforms
+
+### 2d
+
+### 3d
+
+## Animation
+
+## Logic
+
+### Physics
+
+### Entity
+
+### Map
+
+### Lifecycle
+
+## Audio
+
+## I/O
+* Bind input system for Mouse and Keyboard done through LibGDX
+
 
 # 2D
 
@@ -263,21 +295,3 @@
 * Control panning, volume, etc.
 * Dynamic audio with virtual instruments
 * Audio generation
-
-
-# Current Features
-
-## Graphics
-
-### 2d
-
-### 3d
-
-## Animation
-
-## Logic
-
-## Audio
-
-##
-
