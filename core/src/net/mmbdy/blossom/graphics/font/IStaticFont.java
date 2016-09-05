@@ -1,6 +1,6 @@
 package net.mmbdy.blossom.graphics.font;
 
-public interface StaticFont {
+public interface IStaticFont {
 	
 	public void render();
 	

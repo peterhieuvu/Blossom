@@ -1,5 +1,5 @@
 package net.mmbdy.blossom.graphics.font;
 
-public interface DynamicFont {
+public interface IDynamicFont {
 	
 }

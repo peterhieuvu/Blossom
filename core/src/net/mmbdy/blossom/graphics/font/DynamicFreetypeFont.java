@@ -10,7 +10,7 @@ import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGeneratorLoader;
 import com.badlogic.gdx.graphics.g2d.freetype.FreetypeFontLoader;
 import com.badlogic.gdx.graphics.g2d.freetype.FreetypeFontLoader.FreeTypeFontLoaderParameter;
 
-public class DynamicFreetypeFont implements StaticFont {
+public class DynamicFreetypeFont implements IStaticFont {
 	
 	FreeTypeFontGenerator generator;
 	FreeTypeFontParameter parameter;

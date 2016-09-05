@@ -11,7 +11,7 @@ import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGeneratorLoader;
 import com.badlogic.gdx.graphics.g2d.freetype.FreetypeFontLoader;
 import com.badlogic.gdx.graphics.g2d.freetype.FreetypeFontLoader.FreeTypeFontLoaderParameter;
 
-public class StaticFreetypeFont implements StaticFont {
+public class StaticFreetypeFont implements IStaticFont {
 	
 	private SpriteBatch batch;
 	private BitmapFont font;
