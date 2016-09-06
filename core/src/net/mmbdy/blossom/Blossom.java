@@ -19,6 +19,7 @@ import net.mmbdy.blossom.level.TestLevel;
  * @author Peter Vu
  */
 public class Blossom extends ApplicationAdapter /* implements Disposable */ {
+	//TODO: Implement own system application listener
 	
 	/**
 	 * Input class which has references to all Control Bindings. Static class that can be called from anywhere.
@@ -78,7 +79,7 @@ public class Blossom extends ApplicationAdapter /* implements Disposable */ {
 	}
 	
 	/**
-	 * Called whenever the application is paused. This is usually when the window loses focus and just before the application is destroyed.
+	 * Called whenever the application is paused. This is usually when the window loses focus and just before the application is destroyed. At the moment, pause before application end only happens on android during application closure and phone calls.
 	 */
 	@Override
 	public void pause() {
@@ -87,7 +88,7 @@ public class Blossom extends ApplicationAdapter /* implements Disposable */ {
 	}
 
 	/**
-	 * Called whenever the application is resumed. This is usually when the window regains focus.
+	 * Called whenever the application is resumed. This is usually when the window regains focus. At the moment, this only happens on android.
 	 */
 	@Override
 	public void resume() {

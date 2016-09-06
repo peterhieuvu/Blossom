@@ -9,12 +9,11 @@ import com.badlogic.gdx.controllers.ControllerListener;
 import com.badlogic.gdx.controllers.PovDirection;
 import com.badlogic.gdx.math.Vector3;
 
-//TODO: Document this
 
 public class EventControllerListener implements ControllerListener{
 
-	//TODO: Finish this class
-	
+	//TODOC: Doc this
+	//TODO: Finish
 	@Override
 	public void connected(Controller controller) {
 	}

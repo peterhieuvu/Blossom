@@ -16,7 +16,7 @@ import com.badlogic.gdx.utils.ScreenUtils;
 
 import net.mmbdy.blossom.util.Disposable;
 
-//TODO: Document this
+//TODOC: Document this
 
 public class ScreenshotFactory implements Disposable {
 

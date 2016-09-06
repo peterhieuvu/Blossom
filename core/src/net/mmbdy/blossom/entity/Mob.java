@@ -4,7 +4,7 @@
  */
 package net.mmbdy.blossom.entity;
 
-//TODO: Document this
+//TODOC: Document this
 
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 

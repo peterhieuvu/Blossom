@@ -6,7 +6,8 @@ package net.mmbdy.blossom.graphics.font;
 
 import net.mmbdy.blossom.util.Disposable;
 
-//TODO: Document and finish
+//TODOC: Document
+//TODO: Finish
 
 public interface IDynamicFont extends Disposable {
 }

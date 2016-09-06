@@ -8,7 +8,7 @@ import java.util.ArrayDeque;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-//TODO: Fully document this
+//TODOC: Fully document this
 
 public class StateManager {
 	

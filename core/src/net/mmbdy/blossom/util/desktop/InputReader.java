@@ -10,7 +10,7 @@ import java.util.InputMismatchException;
 
 public class InputReader {
 
-	//TODO: Document this
+	//TODOC: Document this
 	
 	private InputStream stream;
 

@@ -8,7 +8,7 @@ import java.awt.Point;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-//TODO: Document this
+//TODOC: Document this
 
 public class Boundary {
 	public float x0, y0, x1, y1;

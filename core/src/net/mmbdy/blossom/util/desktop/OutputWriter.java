@@ -14,7 +14,8 @@ import net.mmbdy.blossom.util.Disposable;
 
 public class OutputWriter implements Disposable{
 
-	//TODO: Document this, look for java fast I/O and faster System.out.print
+	//TODOC: Document this
+	//TODO: look for java fast I/O and faster System.out.print
 	private final PrintWriter writer;
 
 	public OutputWriter(OutputStream outputStream) {

@@ -9,7 +9,8 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import net.mmbdy.blossom.level.Level;
 import net.mmbdy.blossom.physics.spatial.Boundary;
 
-//TODO: Document this
+//TODOC: Document this
+//TODO: finish
 
 public abstract class Entity {
 
@@ -43,7 +44,6 @@ public abstract class Entity {
 	 * @return
 	 */
 	public Boundary getBounds() {
-		// TODO Implement this
 		return null;
 	}
 	

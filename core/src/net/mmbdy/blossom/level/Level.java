@@ -18,11 +18,10 @@ import net.mmbdy.blossom.entity.Player;
 import net.mmbdy.blossom.gamestate.GameState;
 import net.mmbdy.blossom.physics.spatial.Boundary;
 
-//TODO: Document this
+//TODOC: Document this
+//TODO: finish
 
 public abstract class Level implements GameState {
-	
-	//TODO: Finish this class
 	
 	protected Deque<Entity> eQueue = new ArrayDeque<Entity>();
 	

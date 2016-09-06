@@ -10,7 +10,7 @@ import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 
 import net.mmbdy.blossom.util.Disposable;
 
-//TODO: Document this
+//TODOC: Document this
 
 public class Map implements Disposable {
 	

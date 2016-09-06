@@ -15,7 +15,8 @@ import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGeneratorLoader;
 import com.badlogic.gdx.graphics.g2d.freetype.FreetypeFontLoader;
 import com.badlogic.gdx.graphics.g2d.freetype.FreetypeFontLoader.FreeTypeFontLoaderParameter;
 
-//TODO: Document and finish
+//TODOC: Document
+//TODO: finish
 
 public class StaticFreetypeFont implements IStaticFont {
 	

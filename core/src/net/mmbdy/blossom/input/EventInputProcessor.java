@@ -10,7 +10,7 @@ import java.util.Map;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
 
-//TODO: Document this
+//TODOC: Document this
 
 public class EventInputProcessor implements InputProcessor {
 

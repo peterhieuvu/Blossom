@@ -16,7 +16,8 @@ import com.badlogic.gdx.graphics.g2d.freetype.FreetypeFontLoader.FreeTypeFontLoa
 
 public class DynamicFreetypeFont implements IStaticFont {
 	
-	//TODO: Document and Finish this class
+	//TODOC: Document
+	//TODO: Finish this class
 	
 	FreeTypeFontGenerator generator;
 	FreeTypeFontParameter parameter;

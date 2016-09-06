@@ -17,7 +17,7 @@ import com.badlogic.gdx.math.Vector3;
 
 import net.mmbdy.blossom.util.Disposable;
 
-//TODO: Document this
+//TODOC: Document this
 
 public class Parallax implements Disposable {
 	class ParallaxCam extends OrthographicCamera {
