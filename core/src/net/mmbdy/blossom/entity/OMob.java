@@ -8,11 +8,11 @@ package net.mmbdy.blossom.entity;
 
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
-public abstract class Mob extends Entity {
+public abstract class OMob extends OEntity {
 	
 	protected TextureRegion sprite;
 	
-	protected Mob(float x, float y, TextureRegion sprite) {
+	protected OMob(float x, float y, TextureRegion sprite) {
 		this.x = x;
 		this.y = y;
 		this.sprite = sprite;

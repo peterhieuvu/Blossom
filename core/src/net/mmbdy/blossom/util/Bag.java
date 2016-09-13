@@ -50,7 +50,7 @@ public class Bag<T> {
 		if (size == items.length) items = grow();
 		items[size++] = value;
 	}
-
+	
 	public T get(int index) {
 		if (index >= size) throw new IndexOutOfBoundsException(
 				"Index cannot be >= size: " + index + " >= " + size);
@@ -61,6 +61,7 @@ public class Bag<T> {
 		if (index >= size) throw new IndexOutOfBoundsException(
 				"Index cannot be >= size: " + index + " >= " + size);
 		//resize(index * 2);
+		this.size = Math.max(this.size, index + 1);
 		items[index] = value;
 	}
 
@@ -132,12 +133,17 @@ public class Bag<T> {
 		size = 0;
 	}
 
-	protected T[] grow() {
+	public T[] grow() {
 		return resize(Math.max(8, (int)(size * 1.75f)));
 	}
 	
-	protected T[] shrink() {
+	public T[] shrink() {
 		if(items.length != size) resize(size);
+		return items;
+	}
+	
+	public T[] ensureCapacity(int minimumSize) {
+		if(minimumSize >= items.length) resize(Math.max(8, minimumSize));
 		return items;
 	}
 

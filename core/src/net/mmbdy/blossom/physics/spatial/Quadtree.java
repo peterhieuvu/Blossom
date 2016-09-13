@@ -7,7 +7,7 @@ package net.mmbdy.blossom.physics.spatial;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.mmbdy.blossom.entity.Entity;
+import net.mmbdy.blossom.entity.OEntity;
 import net.mmbdy.blossom.util.Disposable;
 
 //TODOC: Document this
@@ -18,7 +18,7 @@ public class Quadtree implements Disposable {
 	private final int MAX_LEVELS = 5; //Deepest level subnode
 
 	private int level; //current node level (0 is topmost)
-	private List<Entity> entities;
+	private List<OEntity> entities;
 	
 	//maybe just make bounds entities themselves
 	private Boundary bounds; //2D space the node occupies
@@ -26,7 +26,7 @@ public class Quadtree implements Disposable {
 
 	public Quadtree(int level, Boundary bounds) {
 		this.level = level;
-		entities = new ArrayList<Entity>();
+		entities = new ArrayList<OEntity>();
 		this.bounds = bounds;
 		nodes = new Quadtree[4];
 	}
@@ -61,7 +61,7 @@ public class Quadtree implements Disposable {
 
 	//Find which node an object belongs to. -1 means object doesnt fit in a child node
 	//and is part of the parent node
-	private int getIndex(Entity entity) {
+	private int getIndex(OEntity entity) {
 		int index = -1;
 		Boundary bounds = entity.getBounds();
 		double verticalMidpoint = bounds.x0 + (bounds.width / 2);
@@ -91,7 +91,7 @@ public class Quadtree implements Disposable {
 	
 	//insert object into quadtree, if node exceeds the capacity, it will split at add all objects
 	//to the corresponding nodes.
-	public void insert(Entity object){
+	public void insert(OEntity object){
 		
 		//go through all the levels until you hit a null layer
 		//check if the node has any child nodes and tries to add the object there,
@@ -125,7 +125,7 @@ public class Quadtree implements Disposable {
 	}
 	
 	//return all objects that could collide with the given object
-	public List<Entity> retrieve(List<Entity> returnObjects, Entity mob){
+	public List<OEntity> retrieve(List<OEntity> returnObjects, OEntity mob){
 		int index = getIndex(mob);
 		if(index != -1 && nodes[0] != null){
 			nodes[index].retrieve(returnObjects, mob);

@@ -11,11 +11,11 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 import net.mmbdy.blossom.input.Input.Binds;
 
-public class Player extends Mob {
+public class OPlayer extends OMob {
 	
 	private float speed = 180; // Per second
 	
-	public Player(float x, float y, TextureRegion texture) {
+	public OPlayer(float x, float y, TextureRegion texture) {
 		super(x, y, texture);
 	}
 	

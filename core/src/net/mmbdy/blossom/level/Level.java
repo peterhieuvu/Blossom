@@ -13,8 +13,8 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 
-import net.mmbdy.blossom.entity.Entity;
-import net.mmbdy.blossom.entity.Player;
+import net.mmbdy.blossom.entity.OEntity;
+import net.mmbdy.blossom.entity.OPlayer;
 import net.mmbdy.blossom.gamestate.GameState;
 import net.mmbdy.blossom.physics.spatial.Boundary;
 
@@ -23,12 +23,12 @@ import net.mmbdy.blossom.physics.spatial.Boundary;
 
 public abstract class Level implements GameState {
 	
-	protected Deque<Entity> eQueue = new ArrayDeque<Entity>();
+	protected Deque<OEntity> eQueue = new ArrayDeque<OEntity>();
 	
-	protected List<Entity> entities = new ArrayList<Entity>();
+	protected List<OEntity> entities = new ArrayList<OEntity>();
 	
 	private TextureAtlas playerAtlas;
-	private Player player;
+	private OPlayer player;
 	
 	public float width = 800, height = 480;
 	
@@ -45,13 +45,13 @@ public abstract class Level implements GameState {
 		
 		bounds = new Boundary().setBounds(0, 0, 800, 480);
 		
-		player = new Player(0, 0, playerAtlas.findRegion("blackblue"));
+		player = new OPlayer(0, 0, playerAtlas.findRegion("blackblue"));
 	}
 	
 	@Override
 	public void tick(float delta) {
 		player.tick(delta);
-		for (Entity e : entities) {
+		for (OEntity e : entities) {
 			e.tick(delta);
 		}
 		purge();
@@ -74,7 +74,7 @@ public abstract class Level implements GameState {
 		batch.enableBlending();
 		batch.begin();
 		player.render(batch);
-		for (Entity e : entities) {
+		for (OEntity e : entities) {
 			e.render(batch);
 		}
 		
@@ -94,18 +94,18 @@ public abstract class Level implements GameState {
 	public void dispose() {
 		playerAtlas.dispose();
 		player.dispose();
-		for (Entity e : entities) {
+		for (OEntity e : entities) {
 			e.dispose();
 		}
 		entities.clear();
 		eQueue.clear();
 	}
 	
-	public List<Entity> getEntities() {
+	public List<OEntity> getEntities() {
 		return entities;
 	}
 	
-	public Player getPlayer() {
+	public OPlayer getPlayer() {
 		return player;
 	}
 	
@@ -115,11 +115,11 @@ public abstract class Level implements GameState {
 		}
 	}
 	
-	public void add(Entity e) {
+	public void add(OEntity e) {
 		eQueue.offer(e);
 	}
 	
-	private void insert(Entity e) {
+	private void insert(OEntity e) {
 		e.init(this);
 		entities.add(e);
 	}

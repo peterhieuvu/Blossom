@@ -4,6 +4,8 @@
 	* There is a lot of function calling, so check to make sure everything in inlining
 * System to load Settings
 * Entity System
+	* Pooling
+	* Profile and optimize
 * Physics
 * Debugging
 * Logging

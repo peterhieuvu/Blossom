@@ -12,14 +12,14 @@ import net.mmbdy.blossom.physics.spatial.Boundary;
 //TODOC: Document this
 //TODO: finish
 
-public abstract class Entity {
+public abstract class OEntity {
 
 	protected Level level;
 	
 	private boolean removed = false;
 	public float x, y;
 
-	public Entity() {
+	public OEntity() {
 	}
 	
 	public void init(Level level){
